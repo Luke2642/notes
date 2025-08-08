@@ -10,8 +10,8 @@ Instructions for a Fresh install of Fedora 42 Plasma Desktop (https://fedoraproj
 
 - Nvidia Drivers 575.64.05
 - Cuda Toolkit 12.8
-- pytorch 2.8.0, torchvision, xformers (which is stuck on pytorch 2.8.0 for now), triton
-- ComfyUI with sageattention 2+, flash attention, nunchaku
+- pytorch 2.8.0, (torch, torchvision) 
+- ComfyUI with xformers, triton, sageattention 2+, flash attention, nunchaku
 
 Fedora 42 comes with Python 3.13 but it seems to work just fine with everything.
 
@@ -26,6 +26,10 @@ https://github.com/thu-ml/SageAttention
 https://github.com/Dao-AILab/flash-attention
 
 https://github.com/nunchaku-tech/nunchaku
+
+https://github.com/facebookresearch/xformers
+
+
 
 
 During the welcome screen, choose **Enable non-free repositories**, which enables RPM Fusion. The following commands to install Nvidia drivers then gets the latest 575.64.05:
@@ -73,7 +77,8 @@ git clone https://github.com/comfyanonymous/ComfyUI.git
 cd ComfyUI/
 uv venv
 source .venv/bin/activate
-uv pip install torch torchvision xformers --index-url https://download.pytorch.org/whl/cu128
+uv pip install torch==2.8.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+uv pip install ninja
 ```
 
 Then, I modify the requirements.txt to include at the top:
@@ -128,7 +133,7 @@ Now all the requirements are met, flash attention is now a one line build:
 uv pip install flash-attn --no-build-isolation
 ```
 
-Building the latest Nunchaku backend from source "just works" too, as of August 2025:
+Building the latest Nunchaku backend from source "just works" too, and only takes a few minutes as of August 2025:
 
 ```
 git clone https://github.com/nunchaku-tech/nunchaku.git
@@ -136,6 +141,13 @@ cd nunchaku
 git submodule init
 git submodule update
 uv pip install -e . --no-build-isolation
+```
+
+Similarly xformers builds fine too, we can just use the all in one command instead of cloning it into a subfolder and building:
+
+```
+pip install -v --no-build-isolation -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
+
 ```
 
 # Finally ditch Firefox and install Brave:
