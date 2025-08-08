@@ -83,7 +83,7 @@ I think I confused that one of the requirements for *packaging* with *packages* 
 
 ```
 sudo dnf install libxml2-devel libxslt-devel
-uv pip install packages lxml==6.0.0 think this is wrong
+uv pip install packages lxml==6.0.0
 ```
 
 So this is correct:
