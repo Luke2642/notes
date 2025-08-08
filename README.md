@@ -32,7 +32,7 @@ https://github.com/facebookresearch/xformers
 
 
 
-During the welcome screen, choose **Enable non-free repositories**, which enables RPM Fusion. The following commands to install Nvidia drivers then gets the latest 575.64.05:
+After Fedora installation, during the first welcome screen, choose **Enable non-free repositories**, which enables RPM Fusion. The following commands to install Nvidia drivers then gets the latest 575.64.05:
 
 ```
 sudo dnf update
