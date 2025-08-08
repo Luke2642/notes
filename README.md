@@ -129,6 +129,25 @@ git submodule update
 uv pip install -e . --no-build-isolation
 ```
 
+However, it's much faster to build only for your GPU:
+
+```
+# For a sm_120 (Blackwell: RTX 5090)
+TORCH_CUDA_ARCH_LIST="12.0" uv pip install -v -e . --no-build-isolation
+
+# For a sm_89 (Ada: RTX 4090)
+TORCH_CUDA_ARCH_LIST="8.9" uv pip install -v -e . --no-build-isolation
+
+# For a sm_86 (Ampere: RTX 3090, A6000) 
+TORCH_CUDA_ARCH_LIST="8.6" uv pip install -v -e . --no-build-isolation
+
+# For a sm_80 (Ampere: A100)
+TORCH_CUDA_ARCH_LIST="8.0" uv pip install -v -e . --no-build-isolation
+
+# For a sm_75 (Turing: RTX 2080)
+TORCH_CUDA_ARCH_LIST="7.5" uv pip install -v -e . --no-build-isolation
+```
+
 Similarly xformers builds fine too, they suggest the all in one command instead of cloning it into a subfolder and building:
 
 ```
