@@ -146,7 +146,7 @@ uv pip install -e . --no-build-isolation
 Similarly xformers builds fine too, we can just use the all in one command instead of cloning it into a subfolder and building:
 
 ```
-pip install -v --no-build-isolation -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
+uv pip install -v --no-build-isolation -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
 
 ```
 
