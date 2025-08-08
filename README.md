@@ -100,13 +100,16 @@ noexcept (true)
 
 to the end of each of the cospi sinpi cospif sinpif definitions in:
 
+```
 /usr/local/cuda-12.8/targets/x86_64-linux/include/crt/math_functions.h
+```
 
 Then we can proceed with building sage attention.
 
 ```
 git clone https://github.com/thu-ml/SageAttention.git
 cd SageAttention
+```
 
 Fedora 42 comes with gcc-15 and g++-15 so we need that gcc 14 we installed earlier to be temporarily enabled:
 
