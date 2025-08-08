@@ -30,8 +30,6 @@ https://github.com/nunchaku-tech/nunchaku
 https://github.com/facebookresearch/xformers
 
 
-
-
 After Fedora installation, during the first welcome screen, choose **Enable non-free repositories**, which enables RPM Fusion. The following commands to install Nvidia drivers then gets the latest 575.64.05:
 
 ```
@@ -79,6 +77,7 @@ uv venv
 source .venv/bin/activate
 uv pip install torch==2.8.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
 uv pip install ninja
+uv pip install packaging wheel
 ```
 
 Then, I modify the requirements.txt to include at the top:
@@ -87,26 +86,13 @@ Then, I modify the requirements.txt to include at the top:
 --extra-index-url --index-url https://download.pytorch.org/whl/cu128
 ```
 
-I think I confused that one of the requirements for *packaging* with *packages* and that had some extra requirements, which can probably be skipped next time:
+Then, to build anything useful like sage attention with cuda 12.8 on fedora 42, we must first modify a bad cuda header file that Nvidia really should fix, but hasn't. Plenty of forum posts about this, but not easy to find. Add:
 
 ```
-sudo dnf install libxml2-devel libxslt-devel
-uv pip install packages lxml==6.0.0
+ noexcept (true)
 ```
 
-So this is correct:
-
-```
-uv pip install packaging wheel
-```
-
-Then, to build sage attention with cuda 12.8 on fedora 42, you must modify a bad cuda header file that nvidia really should fix. Add:
-
-```
-noexcept (true)
-```
-
-to the end of each of the cospi sinpi cospif sinpif definitions in:
+to the end of each of the cospi sinpi cospif sinpif function definitions, before the semicolon in:
 
 ```
 /usr/local/cuda-12.8/targets/x86_64-linux/include/crt/math_functions.h
@@ -143,7 +129,7 @@ git submodule update
 uv pip install -e . --no-build-isolation
 ```
 
-Similarly xformers builds fine too, we can just use the all in one command instead of cloning it into a subfolder and building:
+Similarly xformers builds fine too, they suggest the all in one command instead of cloning it into a subfolder and building:
 
 ```
 uv pip install -v --no-build-isolation -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
@@ -161,8 +147,12 @@ uv pip install -e . --no-build-isolation
 Then finally, check your work:
 
 ```
-uv list
+uv pip list
 ```
+
+And you should see all the latest packages:
+
+
 
 # Ditch Firefox and install Brave:
 
