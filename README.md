@@ -176,7 +176,101 @@ uv pip list
 
 And you should see all the latest packages:
 
-
+```
+Using Python 3.13.5 environment at: /home/luke/github/ComfyUI/.venv
+Package                    Version                    
+-------------------------- -------------------------- 
+accelerate                 1.10.0
+aiohappyeyeballs           2.6.1
+aiohttp                    3.12.15
+aiosignal                  1.4.0
+alembic                    1.16.4
+annotated-types            0.7.0
+attrs                      25.3.0
+av                         15.0.0
+certifi                    2022.12.7
+cffi                       1.17.1
+charset-normalizer         2.1.1
+comfyui-embedded-docs      0.2.4
+comfyui-frontend-package   1.24.4
+comfyui-workflow-templates 0.1.52
+diffusers                  0.34.0
+einops                     0.8.1
+filelock                   3.18.0
+flash-attn                 2.8.2
+frozenlist                 1.7.0
+fsspec                     2025.7.0
+greenlet                   3.2.4
+hf-xet                     1.1.7
+huggingface-hub            0.34.4
+idna                       3.4
+importlib-metadata         8.7.0
+jinja2                     3.1.6
+kornia                     0.8.1
+kornia-rs                  0.1.9
+lxml                       6.0.0
+mako                       1.3.10
+markupsafe                 3.0.2
+mpmath                     1.3.0
+multidict                  6.6.3
+networkx                   3.5
+ninja                      1.11.1.4
+numpy                      2.3.2
+nunchaku                   0.3.2.dev20250808+torch2.8 
+nvidia-cublas-cu12         12.8.4.1
+nvidia-cuda-cupti-cu12     12.8.90
+nvidia-cuda-nvrtc-cu12     12.8.93
+nvidia-cuda-runtime-cu12   12.8.90
+nvidia-cudnn-cu12          9.10.2.21
+nvidia-cufft-cu12          11.3.3.83
+nvidia-cufile-cu12         1.13.1.3
+nvidia-curand-cu12         10.3.9.90
+nvidia-cusolver-cu12       11.7.3.90
+nvidia-cusparse-cu12       12.5.8.93
+nvidia-cusparselt-cu12     0.7.1
+nvidia-nccl-cu12           2.27.3
+nvidia-nvjitlink-cu12      12.8.93
+nvidia-nvtx-cu12           12.8.90
+packages                   0.1.0
+packaging                  25.0
+pillow                     11.0.0
+propcache                  0.3.2
+protobuf                   6.31.1
+psutil                     7.0.0
+pycparser                  2.22
+pydantic                   2.11.7
+pydantic-core              2.33.2
+pydantic-settings          2.10.1
+python-dotenv              1.1.1
+pyyaml                     6.0.2
+regex                      2025.7.34
+requests                   2.28.1
+safetensors                0.6.1
+sageattention              2.2.0                      
+scipy                      1.16.1
+sentencepiece              0.2.0
+setuptools                 80.9.0
+soundfile                  0.13.1
+spandrel                   0.4.1
+sqlalchemy                 2.0.42
+sympy                      1.14.0
+tokenizers                 0.21.4
+torch                      2.8.0+cu128
+torchaudio                 2.8.0+cu128
+torchsde                   0.2.6
+torchvision                0.23.0+cu128
+tqdm                       4.66.5
+trampoline                 0.1.2
+transformers               4.55.0
+triton                     3.4.0
+typing-extensions          4.14.1
+typing-inspection          0.4.1
+urllib3                    1.26.13
+wheel                      0.45.1
+xformers                   0.0.32+635a8ab2.d20250808
+yarl                       1.20.1
+zipp                       3.23.0
+```
 
 # Ditch Firefox and install Brave:
 
