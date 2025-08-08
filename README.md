@@ -129,9 +129,14 @@ git submodule update
 uv pip install -e . --no-build-isolation
 ```
 
-However, it's much faster to build only for your GPU:
+This does take a while. Next time I should investigate if there is a faster way to build only for your GPU:
 
 ```
+
+CUDA_VISIBLE_DEVICES=0 NUNCHAKU_INSTALL_MODE=FAST uv pip install -v -e . --no-build-isolation
+
+or perhaps
+
 # For a sm_120 (Blackwell: RTX 5090)
 TORCH_CUDA_ARCH_LIST="12.0" uv pip install -v -e . --no-build-isolation
 
