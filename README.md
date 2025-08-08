@@ -33,7 +33,7 @@ sudo dnf install akmod-nvidia
 sudo dnf install xorg-x11-drv-nvidia-cuda
 ```
 
-There's no Cuda 12.8 toolkit for Fedora 42, but the Fedora 41 version works fine. First a 6Gb download:
+There's no Cuda 12.8 toolkit for Fedora 42, but the Fedora 41 version works fine. First a 6Gb download, then install:
 
 ```
 wget https://developer.download.nvidia.com/compute/cuda/12.8.1/local_installers/cuda-repo-fedora41-12-8-local-12.8.1_570.124.06-1.x86_64.rpm
