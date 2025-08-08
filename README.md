@@ -1,4 +1,4 @@
-# Fedora Development Environment Setup
+# Fedora Development Environment Setup - Building from source, not wheels.
 
 A collection of my development environment notes and solutions, thrown in one big Readme.md
 
@@ -147,7 +147,15 @@ Similarly xformers builds fine too, we can just use the all in one command inste
 
 ```
 uv pip install -v --no-build-isolation -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
+```
 
+But you can also do it step by step, it works fine:
+
+```
+git clone https://github.com/facebookresearch/xformers.git
+cd xformers
+git submodule update --init --recursive
+uv pip install -e . --no-build-isolation
 ```
 
 # Finally ditch Firefox and install Brave:
