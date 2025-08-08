@@ -13,6 +13,8 @@ Instructions for a Fresh install of Fedora 42 Plasma Desktop (https://fedoraproj
 - torch, torchvision, xformers, triton
 - ComfyUI with sageattention 2+, flash attention
 
+Fedora 42 comes with Python 3.13 but it seems to work just fine with everything.
+
 # Resources
 
 https://fedoraproject.org/kde/download
