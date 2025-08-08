@@ -1,4 +1,4 @@
-# Fedora Development Environment Setup - Building from source, not wheels.
+# Fedora Development Environment Setup - Some wheels, some building from source.
 
 A collection of my development environment notes and solutions, thrown in one big Readme.md
 
