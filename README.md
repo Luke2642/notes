@@ -158,7 +158,13 @@ git submodule update --init --recursive
 uv pip install -e . --no-build-isolation
 ```
 
-# Finally, ditch Firefox and install Brave:
+Then finally, check your work:
+
+```
+uv list
+```
+
+# Ditch Firefox and install Brave:
 
 ```
 curl -fsS https://dl.brave.com/install.sh | sh
