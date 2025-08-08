@@ -1,8 +1,8 @@
-# Development Environment Setup
+# Fedora Development Environment Setup
 
 A collection of my development environment notes and solutions, thrown in one big Readme.md
 
-I abandoned Ubuntu 22.04 and 24.04, tried Debian, but ultimately found Fedora 42 with KDE was a much nicer out of the box experience. These instructions set up the workstation in about 1 hour and avoids the little papercuts and install all the things essential as of August 2025.
+I abandoned Ubuntu 22.04 and 24.04, then tried Debian, but ultimately found Fedora 42 with KDE was a much nicer out of the box experience. These instructions set up the workstation in about 1 hour and avoids the little papercuts and install all the things essential as of August 2025.
 
 For a workstation setup it has key quality of life advantages such as fractional scaling on the display, and btrfs by default, making snapshotting and rolling back a doddle.
 
