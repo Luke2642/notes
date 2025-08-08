@@ -138,13 +138,13 @@ git submodule update
 uv pip install -e . --no-build-isolation
 ```
 
-# Finally obviously ditch firefox and install brave:
+# Finally ditch Firefox and install Brave:
 
 ```
 curl -fsS https://dl.brave.com/install.sh | sh
 ```
 
-Set up sync with your phone, settings > Sync > I have a sync code
+Set up sync with Brave on your phone, on the desktop choose settings > Sync > I have a sync code
 
 Disable that annoying accidental mute button: settings > search > mute > disable mute on tab
 
