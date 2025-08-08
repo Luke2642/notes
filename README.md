@@ -25,9 +25,7 @@ https://github.com/thu-ml/SageAttention
 
 https://github.com/Dao-AILab/flash-attention
 
-During the welcome screen, choose Enable non-free repositories, which enables RPM Fusion.
-
-Then to install Nvidia drivers:
+During the welcome screen, choose **Enable non-free repositories**, which enables RPM Fusion. The following commands to install Nvidia drivers then gets the latest 575.64.05:
 
 ```
 sudo dnf update
