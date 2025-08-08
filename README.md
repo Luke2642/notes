@@ -10,7 +10,7 @@ Instructions for a Fresh install of Fedora 42 Plasma Desktop (https://fedoraproj
 
 - Nvidia Drivers 575.64.05
 - Cuda Toolkit 12.8
-- torch, torchvision, xformers, triton
+- pytorch 2.8.0, torchvision, xformers (which is stuck on pytorch 2.8.0 for now), triton
 - ComfyUI with sageattention 2+, flash attention
 
 Fedora 42 comes with Python 3.13 but it seems to work just fine with everything.
