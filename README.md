@@ -8,10 +8,10 @@ For a workstation setup it has key quality of life advantages such as fractional
 
 Instructions for a Fresh install of Fedora 42 Plasma Desktop (https://fedoraproject.org/kde/) with all the essentials, as of August 2025:
 
-Nvidia Drivers 575.64.05
-Cuda Toolkit 12.8
-torch, torchvision, xformers, triton
-ComfyUI with sageattention 2+, flash attention
+- Nvidia Drivers 575.64.05
+- Cuda Toolkit 12.8
+- torch, torchvision, xformers, triton
+- ComfyUI with sageattention 2+, flash attention
 
 Resources
 
