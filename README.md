@@ -61,7 +61,7 @@ sudo dnf install gcc14
 sudo dnf install gcc14-c++
 ```
 
-I put lots of projects in Home/github
+I put projects in /home/github to keep it tidy:
 
 ```
 mkdir github
