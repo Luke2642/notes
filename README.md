@@ -11,7 +11,7 @@ Instructions for a Fresh install of Fedora 42 Plasma Desktop (https://fedoraproj
 - Nvidia Drivers 575.64.05
 - Cuda Toolkit 12.8
 - pytorch 2.8.0, torchvision, xformers (which is stuck on pytorch 2.8.0 for now), triton
-- ComfyUI with sageattention 2+, flash attention
+- ComfyUI with sageattention 2+, flash attention, nunchaku
 
 Fedora 42 comes with Python 3.13 but it seems to work just fine with everything.
 
@@ -24,6 +24,9 @@ https://rpmfusion.org/Howto/NVIDIA
 https://github.com/thu-ml/SageAttention
 
 https://github.com/Dao-AILab/flash-attention
+
+https://github.com/nunchaku-tech/nunchaku
+
 
 During the welcome screen, choose **Enable non-free repositories**, which enables RPM Fusion. The following commands to install Nvidia drivers then gets the latest 575.64.05:
 
@@ -111,7 +114,7 @@ export CC=/usr/bin/gcc-14
 export CXX=/usr/bin/g++-14
 ```
 
-Then we can proceed with building sage attention. So this will then work:
+Then we can proceed with building sage attention. So this will then work as of August 2025:
 
 ```
 git clone https://github.com/thu-ml/SageAttention.git
@@ -125,7 +128,17 @@ Now all the requirements are met, flash attention is now a one line build:
 uv pip install flash-attn --no-build-isolation
 ```
 
-And finally obviously ditch firefox and install brave:
+Building the latest Nunchaku backend from source "just works" too, as of August 2025:
+
+```
+git clone https://github.com/nunchaku-tech/nunchaku.git
+cd nunchaku
+git submodule init
+git submodule update
+uv pip install -e . --no-build-isolation
+```
+
+# Finally obviously ditch firefox and install brave:
 
 ```
 curl -fsS https://dl.brave.com/install.sh | sh
@@ -136,6 +149,3 @@ Set up sync with your phone, settings > Sync > I have a sync code
 Disable that annoying accidental mute button: settings > search > mute > disable mute on tab
 
 And set tabs to vertical, because screens are wider than tall, and page titles are long.
-
-
-
