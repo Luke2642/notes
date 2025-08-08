@@ -114,7 +114,7 @@ export CC=/usr/bin/gcc-14
 export CXX=/usr/bin/g++-14
 ```
 
-Then we can proceed with building sage attention. So this will then work as of August 2025:
+Then we can proceed with building sage attention. Inside the comfyui folder, with the venv activated:
 
 ```
 git clone https://github.com/thu-ml/SageAttention.git
