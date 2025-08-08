@@ -49,7 +49,7 @@ sudo dnf clean all
 sudo dnf -y install cuda-toolkit-12-8
 ```
 
-Then get some essentials. Don't use pip, switch to uv. It's faster and has better caching and dependency resolution:
+Then get some essentials. Don't use pip, remove it, and use uv. It's built in Rust, is faster and has better caching and dependency resolution:
 
 ```
 sudo dnf install git
@@ -119,7 +119,7 @@ export CC=/usr/bin/gcc-14
 export CXX=/usr/bin/g++-14
 ```
 
-Then we can proceed with building sage attention. Inside the comfyui folder, with the venv activated:
+Then we can proceed with building sage attention. Inside the comfyui folder, with the .venv activated:
 
 ```
 git clone https://github.com/thu-ml/SageAttention.git
@@ -149,7 +149,7 @@ Similarly xformers builds fine too, we can just use the all in one command inste
 uv pip install -v --no-build-isolation -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
 ```
 
-But you can also do it step by step, it works fine:
+But you can also do it step by step, it works the same:
 
 ```
 git clone https://github.com/facebookresearch/xformers.git
@@ -158,14 +158,14 @@ git submodule update --init --recursive
 uv pip install -e . --no-build-isolation
 ```
 
-# Finally ditch Firefox and install Brave:
+# Finally, ditch Firefox and install Brave:
 
 ```
 curl -fsS https://dl.brave.com/install.sh | sh
 ```
 
-Set up sync with Brave on your phone, on the desktop choose settings > Sync > I have a sync code
+Start the sync chain on Brave on your phone, then on the desktop choose settings > Sync > I have a sync code
 
-Disable that annoying accidental mute button: settings > search > mute > disable mute on tab
+Disable that annoying accidental tab mute button: settings > search > mute > disable mute on tab
 
 And set tabs to vertical, because screens are wider than tall, and page titles are long.
