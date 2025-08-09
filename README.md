@@ -1,8 +1,6 @@
-# Fedora Development Environment Setup - Some wheels, some building from source.
+# Fedora 42 Development Environment Setup - Some wheels, some building from source.
 
-A collection of my development environment notes and solutions, thrown in one big Readme.md
-
-I enjoyed Ubuntu 22.04 for a while as it is so widely used as a base, so good package and wheel availibility. But Fedora 42 with KDE is a much nicer out of the box experience. These instructions set up my workstation in about 1 hour and avoids the little papercuts and install all the things essential as of August 2025 for some basic development on ComfyUI.
+I enjoyed Ubuntu 22.04 for a while, it's widely used so good package and wheel availibility. However, I recently found Fedora 42 with KDE is a much nicer out of the box experience. These instructions set up my workstation in about 1 hour and avoids the little papercuts and install all the things essential as of August 2025 for some basic development on ComfyUI.
 
 For a workstation setup it has key quality of life advantages such as fractional scaling on the display, and btrfs by default, making snapshotting and rolling back a doddle.
 
