@@ -81,7 +81,7 @@ uv pip install packaging wheel
 Then, I modify the requirements.txt to include at the top:
 
 ```
---extra-index-url --index-url https://download.pytorch.org/whl/cu128
+--extra-index-url https://download.pytorch.org/whl/cu128
 ```
 
 Then, to build anything useful like sage attention with cuda 12.8 on fedora 42, we must first modify a bad cuda header file that Nvidia really should fix, but hasn't. Plenty of forum posts about this, but not easy to find. Add:
