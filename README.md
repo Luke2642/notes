@@ -278,6 +278,7 @@ curl -fsS https://dl.brave.com/install.sh | sh
 
 Start the sync chain on Brave on your phone, then on the desktop choose settings > Sync > I have a sync code
 
-Disable that annoying accidental tab mute button: settings > search > mute > disable mute on tab
-
-And set tabs to vertical, because screens are wider than tall, and page titles are long.
+- Disable that annoying accidental tab mute button: settings > search > mute > disable mute on tab
+- And set tabs to vertical, because screens are wider than tall, and page titles are long.
+- use wide address bar
+- show full urls
