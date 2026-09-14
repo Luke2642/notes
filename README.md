@@ -123,7 +123,19 @@ export NVCC_THREADS=4
 uv pip install flash-attn --no-build-isolation
 ```
 
-It's much easier to install xformers now, just uv pip install xformers, if you need it.
+It's much easier to install xformers now:
+
+```
+uv pip install -U xformers --no-deps --index-url https://download.pytorch.org/whl/cu130
+python -m xformers.info
+```
+
+And random packages to stop comfyui complaining:
+
+```
+uv pip install PyOpenGL-accelerate
+```
+
 
 Then finally, check your work:
 
@@ -185,6 +197,7 @@ markdown-it-py                             4.2.0
 markupsafe                                 3.0.3
 mdurl                                      0.1.2
 mpmath                                     1.3.0
+mslk                                       0.0.0
 multidict                                  6.8.0
 networkx                                   3.6.1
 ninja                                      1.13.2
@@ -213,6 +226,7 @@ pydantic-core                              2.46.5
 pydantic-settings                          2.15.0
 pygments                                   2.21.0
 pyopengl                                   3.1.10
+pyopengl-accelerate                        3.1.10
 python-dotenv                              1.2.3
 pyyaml                                     6.0.3
 regex                                      2026.9.10
@@ -244,6 +258,7 @@ urllib3                                    2.7.0
 wheel                                      0.48.0
 xformers                                   0.0.35
 yarl                                       1.24.5
+
 
 ```
 
