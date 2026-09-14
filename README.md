@@ -23,10 +23,22 @@ https://github.com/thu-ml/SageAttention
 
 https://github.com/Dao-AILab/flash-attention
 
-
 After Fedora installation, during the first welcome screen, choose **Enable non-free repositories**, which enables RPM Fusion. 
 
 Then open the discover app and under Hardware Drivers, install the Nvidia drivers which gets the latest 610.57.04 as of time of writing.
+
+First, fix the Konsole ctrl-v bug:
+
+```
+nano ~/.inputrc
+```
+And paste in:
+
+```
+set enable-bracketed-paste off
+```
+
+
 
 Add the repo for the Nvidia toolkit:
 
