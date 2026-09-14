@@ -38,6 +38,11 @@ And paste in:
 set enable-bracketed-paste off
 ```
 
+Swap FFMPEG:
+
+```
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+```
 
 
 Add the repo for the Nvidia toolkit:
